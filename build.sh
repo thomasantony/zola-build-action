@@ -10,7 +10,7 @@ if [[ -z "$BUILD_DIR" ]]; then
 fi
 
 if [[ -z "$CONFIG_FILE" ]]; then
-    CONFIG_FILE="config.live.toml"
+    CONFIG_FILE="config.toml"
 fi
 
 main() {
@@ -22,7 +22,6 @@ main() {
     cd $BUILD_DIR
 
     zola --config ${CONFIG_FILE} build
-    chmod -R 777 dist
 }
 
 main "$@"
